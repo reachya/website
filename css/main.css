@@ -209,7 +209,7 @@ body > section {
   width: 25%;
 }
 .navigation .navbar-nav > li > a {
-  color: #fff;
+  color: #aaa;
   font-size: 13px;
   line-height: 20px;
   font-weight: 600;
@@ -238,7 +238,7 @@ body > section {
 #home{
   padding: 0;
   overflow: hidden;
-  background-color: #000000;
+  background-color: #fff;
 }
 #home-carousel .carousel-inner .item {
   background-size: cover;
@@ -270,7 +270,7 @@ body > section {
   display: inline-block;
 }
 .carousel-caption ul li i{
-  color: #fff;
+  color: #aaa;
 }
 
 #home-carousel .second-caption {
@@ -278,7 +278,7 @@ body > section {
   text-align: center;
 }
 #home-carousel .carousel-inner h2 {
-  color: #ffffff;
+  color: #000;
   font-size: 38px;
   line-height: 57px;
   margin-bottom: 20px;
@@ -286,7 +286,7 @@ body > section {
 }
 
 #home-carousel .carousel-inner p {
-  color: #FFFFFF;
+  color: #000;
   line-height: 29px;
   font-size: 18px;
   margin-top: 0;
@@ -1322,12 +1322,12 @@ label{
     font-size: 14px;
   }
   .navbar-toggle {
-    border: 1px solid #fff;
+    border: 1px solid #888;
     margin-top: 37px;
   }
 
   .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: #888;
   }
 
   .animated-nav .navbar-toggle {
