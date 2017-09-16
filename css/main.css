@@ -295,8 +295,8 @@ body > section {
 }
 
 #nav-arrows > a {
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #aaa;
+  color: #aaa;
   display: block;
   height: 60px;
   line-height: 76px;
