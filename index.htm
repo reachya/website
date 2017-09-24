@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="css\animate.css">
         <link rel="stylesheet" href="css\main.css">
         <script src="js\vendor\modernizr.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-database.js"></script>
     </head>
     <body>
         <!-- Preloader -->
@@ -634,7 +636,7 @@
                                     <textarea name="message" id="message" class="form-control" rows="6" required="" data-validation-required-message="Please enter your message."></textarea>
                                 </div>
                                 <div class="submit-btn">
-                                    <button type="submit" class="btn btn-primary pull-right">Send Message</button>
+                                    <button type="button" class="btn btn-primary pull-right" onclick="sendMessage(); return false;">Send Message</button>
                                 </div>
                             </form>
                         </div>

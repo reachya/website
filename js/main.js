@@ -100,3 +100,32 @@ $(function(){
         });
     });
 });
+
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+var config = {
+    databaseURL: "https://reachya-d82fd.firebaseio.com"
+};
+otherApp = firebase.initializeApp(config, "website");
+
+function sendMessage(){
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var msg = $("#message").val();
+    var d = new Date();
+    var day = d.getDate();
+    var month = monthNames[d.getMonth()];
+
+    var data = {
+        day: day,
+        month: month,
+        isNew: true,
+        name: name,
+        email: email,
+        txt: msg
+    };
+
+    otherApp.database().ref('messages').push(data);
+}
