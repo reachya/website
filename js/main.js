@@ -108,7 +108,7 @@ var monthNames = ["January", "February", "March", "April", "May", "June",
 var config = {
     databaseURL: "https://reachya-d82fd.firebaseio.com"
 };
-otherApp = firebase.initializeApp(config, "website");
+otherApp = firebase.initializeApp(config, "website" + Math.random().toString());
 
 function sendMessage(){
     var name = $("#name").val();
@@ -127,5 +127,13 @@ function sendMessage(){
         txt: msg
     };
 
-    otherApp.database().ref('messages').push(data);
+    otherApp.database().ref('messages').push(data).then(function(){
+        $("#name").val("");
+        $("#email").val("");
+        $("#message").val("");
+        document.getElementById("success").innerHTML = "<div class=\"alert alert-success fade in\">\
+                                        <a href=\"#\" class=\"close\" style=\"margin-top:-5px\" data-dismiss=\"alert\">&times;</a>\
+                                        <strong>Success!</strong> Your message has been sent successfully.\
+                                    </div>";
+    });
 }
